@@ -1,0 +1,23 @@
+@font-face
+{
+    src: url(./../fonts/Tangerine/Tangerine_Regular.ttf);
+    font-family: Tangerine;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    src: url(./../fonts/PT_Sans/PT_Sans-Web-Regular.ttf);
+    font-family: "PT Sans";
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    src: url(./../fonts/Roboto_Slab/RobotoSlab-Light.ttf);
+    font-family: "Roboto Slab";
+    font-weight: normal;
+    font-style: normal;
+}

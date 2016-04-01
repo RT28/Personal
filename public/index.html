@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+        <title>Riddhi Thakkar</title>
+        
+        <!-- Bootstrap -->
+        <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/app.css" rel="stylesheet">
+        <link href="assets/css/fonts.css" rel="stylesheet">
+        <link href="assets/fonts/fontello/css/fontello.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body ng-app="personal_profile_app" ng-controller="personal_page_controller">
+        <!-- navigation bar -->
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top highlight-background-light light-box-shadow" style="padding: 15px;">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="./index.html" class="navbar-brand brand">Riddhi Thakkar</a>                    
+                </div><!-- navbar-header -->
+                
+                <!-- Horizontal navbar -->
+                <div class="collapse navbar-collapse navbar-right" id="app-navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#home">About <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!-- End Horizontal navbar -->
+            </div><!-- End container -->
+        </nav><!-- End navbar-default -->
+        
+        <!-- Home -->
+        <div id="home" class="secondary-background banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 photo">
+                        <img src="./../assets/images/personal-r.png" style="border-radius: 135px; border: 1px solid #E6E6E6;"/>
+                    </div>
+                    <div class="highlight-background-light col-xs-12 col-sm-6 about-me-text" style="margin-top: 14%; padding: 50px 15px; margin-bottom: 30px;">                                    
+                        <div class="text-font" style="line-height: 25px; padding: 20px 0;">
+                            <p>Hi I'm Riddhi. I'm a Web Developer and Application Developer. </p>
+                            <p>I have been doing this for 3+ years. Currently working as a freelance developer and in the mean time I'm also learning Interaction Design. While in college I was in college and probably at my first job my only passion was coding. But being a part of an implementation team made me realise the importance of User Experience, thats when I decided I too want to create engaging and useful UX. Little did I know that <span class="text-highlight">Minimalism</span> and <span class="text-highlight">Simplicity</span> can be so <span class="text-highlight">Awesome!!!</span></p>
+                            <p>Having said that, development is still my first love. That's why I decided to make a personal page where people can get a glimpse of what I've done.</p>
+                            <p>While I'm not doing any of these, I bake cakes. Or I read fiction books. I've read all of Dan Brown's books. But my personal and all time favourite is <quote><span class="text-highlight">Days of Gold and Sepia</span></quote> by Mrs. Yasmeen Premji</p>
+                        </div>                    
+                    </div><!-- End col-md-12 col-lg-6 -->
+                </div>                
+            </div><!-- End container -->
+        </div><!-- End home -->       
+        
+        <!-- Portfolio -->
+        <div id="portfolio" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <h1 class="primary-font horizontal-center">Portfolio</h1>
+                    <h4 class="secondary-font horizontal-center" style="padding-top: 5px;">More about what I've done</h4>
+                </div><!-- End row -->
+                
+                <div class="row" style="margin-top: 50px;">
+                    <div ng-repeat="item in data.Portfolio" class="col-xs-12 col-lg-12 portfolio-item" ng-click="onPortfolioItemClick(item)">
+                        <a href="details.html"><img ng-src="{{item.ImageUrl}}" alt="{{item.Name}}" class="portfolio-item-thumbnail"></img></a>
+                        <a href="details.html"><div class="details-title">{{item.Name}}</div></a>
+                        <div class="text-font portfolio-item-description">{{item.Description}}</div>
+                    </div>
+                </div><!-- End row -->
+            </div><!-- End container -->
+        </div><!-- End portfolio -->     
+        
+        
+        <!-- Contact -->
+        <div id="contact" class="section-padding">
+            <div class="container horizontal-center">
+                <div class="row">
+                    <h1 class="primary-font horizontal-center">Contact</h1>
+                    <h4 class="secondary-font horizontal-center" style="padding-top: 5px;">Get in touch.</h4>
+                </div>
+                <form name="contact_form" ng-submit="submitMessage()">
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-xs-12 col-md-4">
+                            <span class="icon-mail"></span><span><a href="mailto:riddhi.thakkar2804@gmail.com">{{data.Profile.EmailId}}</a></span>
+                        </div>
+
+                        <div class="col-xs-12 col-md-4">
+                            <span class="icon-phone"></span><span>{{data.Profile.PhoneNumber}}</span>
+                        </div>
+                        
+                        <div class="col-xs-12 col-md-4">
+                            <span class="icon-location"></span><span>{{data.Profile.Location}}</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- End contact -->
+        
+        <div id="footer">
+            <div class="container">
+                <div class="row">  
+                    <div class="copyright pull-left text-font"><a href="#home" style="color: #FFAB91 !important;">Riddhi Thakkar.</a></div>
+                    <div class="copyright pull-right">Last Updated on 31st March, 2016</div>
+                </div>                
+            </div>
+        </div>       
+        
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="assets/js/app.js"></script>        
+    </body>
+</html>

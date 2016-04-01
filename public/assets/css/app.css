@@ -1,0 +1,265 @@
+body
+{
+    font-family: 'PT Sans';
+}
+
+.text-highlight
+{
+    color: #FF8A65;
+}
+
+.primary-background
+{
+    background-color: #FFAB91;
+}
+
+.light-primary-background
+{
+    background-color: #F9F7F8;
+}
+
+.primary-font
+{
+    font-size: 40px;
+    font-family: 'PT Sans', sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.secondary-font
+{
+    font-size: 30px;
+    color: #FFAB91;
+    font-family: Tangerine, sans-serif;
+    font-weight: 700;
+}
+
+.text-font
+{
+    font-size: 14px;
+    color: #888888;
+    font-family: PT Sans;    
+}
+
+.highlight-background-light
+{
+    background-color: #FFFFFF;
+}
+
+.brand
+{
+    font-size: 25px;
+    color: #FFAB91 !important;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+
+.navbar-default .navbar-nav>li>a
+{
+    text-transform: capitalize;
+    font-family: 'PT Sans';
+    padding: 15px 0px 5px;
+    letter-spacing: 1px;   
+    margin: 0px 20px;
+    color: #555;
+    font-size: 13px;
+    background-color: transparent !important;
+}
+
+ 
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav li > a:hover
+{
+    color: #FFAB91;     
+    background-color: transparent;
+}
+
+.horizontal-center
+{
+    text-align: center;
+}
+
+.details-text
+{
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 12px;
+    color: #777777;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.details-title
+{
+    font-family: PT Sans, sans-serif;
+    font-size: 13pt;
+    color: #FFAB91;
+    text-transform: uppercase;    
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.section-subtitle
+{
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.section-subtitle-inverse
+{
+    color: #FFFFFF;
+}
+
+.details-text-inverse
+{
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 2em;    
+}
+
+.quote-courtsey
+{
+    font-family: Tangerine, sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: 400;
+    margin-top: 25px;
+    text-align: end;
+}
+
+.section-padding
+{
+    padding: 100px 0;
+}
+
+.round-icons-primary
+{
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 22px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    float: inherit;
+}
+
+.primary-color
+{
+    color: #FFAB91;
+}
+
+.text-font-1
+{
+    font-family: 'Tangerine', sans-serif;
+    font-size: 35px;
+}
+
+.resume-details
+{
+    margin-left: 20px;    
+    display: inline-block;
+    max-width: 455px;
+}
+
+.portfolio-item
+{
+    padding: 70px 0px;
+    border-bottom: 1px solid #DADADA;
+}
+
+.portfolio-item-thumbnail
+{    
+    float: left;
+    max-width: 100%;
+}
+
+#footer
+{
+    padding: 15px;
+    background-color: #F9F9F9;
+}
+
+#footer .copyright
+{
+    margin-left: 15px;
+    color: #5F5F5F;
+}
+
+
+#portfolio
+{
+    background-color: #F9F9F9;
+}
+
+#contact,
+#contact a
+{
+    color: #555555;
+    font-size: 15pt;
+}
+
+.photo
+{
+    margin-top: 18%; 
+    padding: 50px 15px; 
+    margin-bottom: 30px; 
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .photo
+       {
+        text-align: left;
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .details-title
+       {
+        clear: both;
+        padding-top: 15px;
+        text-align: center;
+    }
+    
+    .portfolio-item-description
+       {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: left;
+    }
+    
+    .portfolio-item-thumbnail
+       {
+        float: none;        
+    }
+    
+    .portfolio-item
+       {
+        text-align: center;
+    }
+    .about-me-text
+       {
+        margin-top: 0px !important;
+        padding-top:0px !important;
+    }
+}
+
+.extra-title
+{
+    font-size: 16pt;
+    color: #777777;
+    margin-bottom: 0px;
+    background-color: #F9F9F9;
+    padding: 10px 0px;
+}
+
+.extra-description
+{
+    background-color: #F9F9F9;
+    padding: 0px 0px 10px;
+}
